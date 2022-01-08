@@ -19,8 +19,9 @@ config.example.php を参考に、config.php を作成。
 index.php と config.php をサーバに設置。  
 ※ index.php は公開領域に。  
 ※ config.php は非公開領域に置くか、HTTPアクセスを制限すること。  
-  
-※ 設置したURL (HTTPS) を、ChatWork の Webhook URL として登録する。  
+※ index.php を設置したURL (HTTPS) を、ChatWork の Webhook URL として登録する。  
+
+log/ フォルダのパーミッションを 666 等、書き込み可能にする。  
   
 # 使い方  
   
@@ -33,3 +34,6 @@ BOT宛に TO をつけてメッセージを送る。
 ない場合は、上記 #ABC 以降の全文が、課題内容として登録されます。  
   
 課題内容の先頭行が件名になります。  
+  
+※ 成功したら、課題のURLがメッセージで通知されます。  
+※ エラー時は log フォルダにエラーログが出力されます。  
